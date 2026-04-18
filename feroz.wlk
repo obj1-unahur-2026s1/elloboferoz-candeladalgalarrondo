@@ -1,30 +1,25 @@
 
 object feroz {
 
-const pesoInicial = 10
+  const pesoInicial = 10
+  var peso = pesoInicial
 
-var peso = pesoInicial
+  method estaSaludable() = peso >= 20 && peso <= 150
 
-method estaSaludable() = peso >= 20 && peso <= 150 
-
-method cambiarPeso(cantidad){
+  method cambiarPeso(cantidad){
     peso = peso + cantidad
-}
+  }
 
 
 method comer(algo){
-   cambiarPeso(algo.peso() * 0.1)
+        self.cambiarPeso(algo.peso() * 0.1)
+    }
 
-} 
+  method correr(){
+    self.cambiarPeso(-1)
+  }
 
-method correr(lugar){
-  cambiarPeso(-1)
+  method sufrirCrisis() {
+    peso = pesoInicial
+  }
 }
-
-
-method sufrirCrisis() {
-  peso = pesoInicial
-}
-
-}
-

@@ -1,12 +1,12 @@
-import feroz.*
 
 
 object cazador {
-    const peso = 80
 
+  const peso = 80
 
-    method atacar(lobo) {
+  method atacar(lobo) {
     lobo.sufrirCrisis()
- }
+  }
 
+  method peso() = peso 
 }
